@@ -20,6 +20,7 @@ namespace ProyectoFinal_InteligenciaArtificial
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            panel1.BackColor = Color.FromArgb(125, Color.Black);
             Environment.SetEnvironmentVariable("Path", @"C:\\PROGRAM FILES (x86)\\swipl\bin");
             string[] p = { "-q", "-f", @"componentes.pl" };
             PlEngine.Initialize(p);
@@ -80,10 +81,12 @@ namespace ProyectoFinal_InteligenciaArtificial
                 {
                     procesador = Convert.ToString(cmb_procesadores.SelectedItem);
                     ltb_Computadores.Items.Add("Procesador = " + procesador);
+                    
                 }
                 else
                 {
                     ltb_Computadores.Items.Add("Procesador = " + item["Proce"].ToString());
+                    
                 }
 
                 //Placa Madre
@@ -91,10 +94,12 @@ namespace ProyectoFinal_InteligenciaArtificial
                 {
                     placa_madre = Convert.ToString(cmb_PlacaMadre.SelectedItem);
                     ltb_Computadores.Items.Add("Placa Madre = " + placa_madre);
+                   
                 }
                 else
                 {
                     ltb_Computadores.Items.Add("Placa Madre = " + item["Placa_m"].ToString());
+                   
                 }
 
                 //GPU
@@ -102,10 +107,12 @@ namespace ProyectoFinal_InteligenciaArtificial
                 {
                     gpu = Convert.ToString(cmb_GPU.SelectedItem);
                     ltb_Computadores.Items.Add("GPU = " + gpu);
+                    
                 }
                 else
                 {
                     ltb_Computadores.Items.Add("GPU = " + item["Gpu"].ToString());
+                    
                 }
 
                 //Ram
@@ -113,10 +120,12 @@ namespace ProyectoFinal_InteligenciaArtificial
                 {
                     ram = Convert.ToString(cmb_Ram.SelectedItem);
                     ltb_Computadores.Items.Add("Ram = " + ram);
+                    
                 }
                 else
                 {
                     ltb_Computadores.Items.Add("Ram = " + item["Ram"].ToString());
+                   
                 }
 
                 //Fuente de Poder
@@ -124,10 +133,12 @@ namespace ProyectoFinal_InteligenciaArtificial
                 {
                     Fuentepw = Convert.ToString(cmb_FuentePw.SelectedItem);
                     ltb_Computadores.Items.Add("Fuente de Poder = " + Fuentepw);
+                   
                 }
                 else
                 {
                     ltb_Computadores.Items.Add("Fuente de Poder = " + item["Fuente_pw"].ToString());
+                   
                 }
 
                 //Periferico
@@ -135,10 +146,12 @@ namespace ProyectoFinal_InteligenciaArtificial
                 {
                     periferico = Convert.ToString(cmb_Periferico.SelectedItem);
                     ltb_Computadores.Items.Add("Periferico = " + periferico);
+                   
                 }
                 else
                 {
                     ltb_Computadores.Items.Add("Periferico = " + item["Perif"].ToString());
+                    
                 }
 
                 //Disco
@@ -146,10 +159,12 @@ namespace ProyectoFinal_InteligenciaArtificial
                 {
                     disco = Convert.ToString(cmb_Disco.SelectedItem);
                     ltb_Computadores.Items.Add("Disco = " + disco);
+                    
                 }
                 else
                 {
                     ltb_Computadores.Items.Add("Disco = " + item["Disco"].ToString());
+                    
                 }
 
                 //Monitor
@@ -157,6 +172,7 @@ namespace ProyectoFinal_InteligenciaArtificial
                 {
                     monitor = Convert.ToString(cmb_Monitor.SelectedItem);
                     ltb_Computadores.Items.Add("Monitor = " + monitor);
+                  
                 }
                 else
                 {
@@ -173,10 +189,11 @@ namespace ProyectoFinal_InteligenciaArtificial
                 {
                     ltb_Computadores.Items.Add("Gabinete = " + item["Gabin"].ToString());
                 }
-                ltb_Computadores.Items.Add("Precio = " + item["Precio"]);
+                ltb_Computadores.Items.Add("Precio = " + item["Precio"].ToString());
                 ltb_Computadores.Items.Add("");
                 ltb_Computadores.Items.Add("--------------------------------");
                 ltb_Computadores.Items.Add("");
+                
             }
 
             PlQuery Otro = new PlQuery("procesador(intel,Y).");
@@ -267,7 +284,37 @@ namespace ProyectoFinal_InteligenciaArtificial
 
         }
 
-    }
-
-        
+        private void btn_Recomendacion_Click(object sender, EventArgs e)
+        {
+            
+            if (txt_Presupuesto.Text.Length != 0)
+            {
+                int valor = int.Parse(txt_Presupuesto.Text);
+                if (valor < 3500000)
+                {
+                    ltb_Computadores.Items.Add("Con su actual presupuesto de $" + valor + " la recomendacion es");
+                    ltb_Computadores.Items.Add("un computador con caracteristicas basicas, le permitira trabajar");
+                    ltb_Computadores.Items.Add("en Offimatica, navegacion en internet y uno que otro programa no");
+                    ltb_Computadores.Items.Add("tan exigente.");
+                }
+                else if (valor < 7500000)
+                {
+                    ltb_Computadores.Items.Add("Con su actual presupuesto de $" + valor + " la recomendacion es");
+                    ltb_Computadores.Items.Add("un computador con caracteristicas avanzadas, le permitira aprovechar");
+                    ltb_Computadores.Items.Add("los componentes en trabajos mas exigentes como juegos y edicion de video.");
+                }
+                else if (valor < 11000000)
+                {
+                    ltb_Computadores.Items.Add("Con su actual presupuesto de $" + valor + " la recomendacion es");
+                    ltb_Computadores.Items.Add("un computador con caracteristicas extremas, le permitira trabajar");
+                    ltb_Computadores.Items.Add("creacion de contenido, streaming, juegos. Todo esto con la mayor");
+                    ltb_Computadores.Items.Add("fluides que le permiten sus componentes.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("El Presupuesto Esta Vacio");
+            }
+        }
+    }       
 }
