@@ -64,9 +64,7 @@
             // 
             this.cmb_procesadores.FormattingEnabled = true;
             this.cmb_procesadores.Items.AddRange(new object[] {
-            "todos",
-            "intel",
-            "amd"});
+            ""});
             this.cmb_procesadores.Location = new System.Drawing.Point(130, 33);
             this.cmb_procesadores.Name = "cmb_procesadores";
             this.cmb_procesadores.Size = new System.Drawing.Size(97, 21);
@@ -167,10 +165,6 @@
             // cmb_PlacaMadre
             // 
             this.cmb_PlacaMadre.FormattingEnabled = true;
-            this.cmb_PlacaMadre.Items.AddRange(new object[] {
-            "todos",
-            "msi",
-            "asus"});
             this.cmb_PlacaMadre.Location = new System.Drawing.Point(130, 67);
             this.cmb_PlacaMadre.Name = "cmb_PlacaMadre";
             this.cmb_PlacaMadre.Size = new System.Drawing.Size(97, 21);
@@ -180,10 +174,6 @@
             // cmb_Ram
             // 
             this.cmb_Ram.FormattingEnabled = true;
-            this.cmb_Ram.Items.AddRange(new object[] {
-            "todos",
-            "ddr_tres",
-            "ddr_cuatro"});
             this.cmb_Ram.Location = new System.Drawing.Point(130, 101);
             this.cmb_Ram.Name = "cmb_Ram";
             this.cmb_Ram.Size = new System.Drawing.Size(97, 21);
@@ -193,10 +183,6 @@
             // cmb_GPU
             // 
             this.cmb_GPU.FormattingEnabled = true;
-            this.cmb_GPU.Items.AddRange(new object[] {
-            "todos",
-            "nvidia",
-            "razen"});
             this.cmb_GPU.Location = new System.Drawing.Point(130, 136);
             this.cmb_GPU.Name = "cmb_GPU";
             this.cmb_GPU.Size = new System.Drawing.Size(97, 21);
@@ -206,10 +192,6 @@
             // cmb_Gabinete
             // 
             this.cmb_Gabinete.FormattingEnabled = true;
-            this.cmb_Gabinete.Items.AddRange(new object[] {
-            "todos",
-            "corsair",
-            "cooler_Master"});
             this.cmb_Gabinete.Location = new System.Drawing.Point(130, 170);
             this.cmb_Gabinete.Name = "cmb_Gabinete";
             this.cmb_Gabinete.Size = new System.Drawing.Size(97, 21);
@@ -219,10 +201,6 @@
             // cmb_Monitor
             // 
             this.cmb_Monitor.FormattingEnabled = true;
-            this.cmb_Monitor.Items.AddRange(new object[] {
-            "todos",
-            "asus",
-            "hp"});
             this.cmb_Monitor.Location = new System.Drawing.Point(358, 141);
             this.cmb_Monitor.Name = "cmb_Monitor";
             this.cmb_Monitor.Size = new System.Drawing.Size(97, 21);
@@ -232,10 +210,6 @@
             // cmb_Disco
             // 
             this.cmb_Disco.FormattingEnabled = true;
-            this.cmb_Disco.Items.AddRange(new object[] {
-            "todos",
-            "kingstong",
-            "samsumg"});
             this.cmb_Disco.Location = new System.Drawing.Point(358, 106);
             this.cmb_Disco.Name = "cmb_Disco";
             this.cmb_Disco.Size = new System.Drawing.Size(97, 21);
@@ -245,10 +219,6 @@
             // cmb_Periferico
             // 
             this.cmb_Periferico.FormattingEnabled = true;
-            this.cmb_Periferico.Items.AddRange(new object[] {
-            "todos",
-            "corsair",
-            "cooler_Master"});
             this.cmb_Periferico.Location = new System.Drawing.Point(358, 67);
             this.cmb_Periferico.Name = "cmb_Periferico";
             this.cmb_Periferico.Size = new System.Drawing.Size(97, 21);
@@ -258,10 +228,6 @@
             // cmb_FuentePw
             // 
             this.cmb_FuentePw.FormattingEnabled = true;
-            this.cmb_FuentePw.Items.AddRange(new object[] {
-            "todos",
-            "cooler_Master",
-            "corsair"});
             this.cmb_FuentePw.Location = new System.Drawing.Point(358, 33);
             this.cmb_FuentePw.Name = "cmb_FuentePw";
             this.cmb_FuentePw.Size = new System.Drawing.Size(97, 21);

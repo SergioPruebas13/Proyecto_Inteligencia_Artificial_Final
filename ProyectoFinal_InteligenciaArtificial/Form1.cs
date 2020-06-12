@@ -23,6 +23,7 @@ namespace ProyectoFinal_InteligenciaArtificial
             Environment.SetEnvironmentVariable("Path", @"C:\\PROGRAM FILES (x86)\\swipl\bin");
             string[] p = { "-q", "-f", @"componentes.pl" };
             PlEngine.Initialize(p);
+            cargarDatosCombobox();
         }
 
         private void btn_Cargar_Click(object sender, EventArgs e)
@@ -184,6 +185,87 @@ namespace ProyectoFinal_InteligenciaArtificial
 
         }
         
+
+        private void cargarDatosCombobox()
+        {
+            List<string> procesadores = new List<string>();
+            List<string> palcaMadre = new List<string>();
+            List<string> gpu = new List<string>();
+            List<string> ram = new List<string>();
+            List<string> fuente = new List<string>();
+            List<string> periferico = new List<string>();
+            List<string> disco = new List<string>();
+            List<string> monitor = new List<string>();
+            List<string> gabinete = new List<string>();
+            procesadores.Add("todos");
+            palcaMadre.Add("todos");
+            gpu.Add("todos");
+            ram.Add("todos");
+            fuente.Add("todos");
+            periferico.Add("todos");
+            disco.Add("todos");
+            monitor.Add("todos");
+            gabinete.Add("todos");
+
+            PlQuery Procesadores = new PlQuery("procesador(X,_).");
+            foreach (PlQueryVariables item in Procesadores.SolutionVariables)
+            {
+                procesadores.Add(item["X"].ToString());
+            }
+            PlQuery PlacaMadre = new PlQuery("placaMadre(X,_).");
+            foreach (PlQueryVariables item in PlacaMadre.SolutionVariables)
+            {
+                palcaMadre.Add(item["X"].ToString());
+            }
+            PlQuery Gpu = new PlQuery("gpu(X,_).");
+            foreach (PlQueryVariables item in Gpu.SolutionVariables)
+            {
+                gpu.Add(item["X"].ToString());
+            }
+            PlQuery Ram = new PlQuery("ram(X,_).");
+            foreach (PlQueryVariables item in Ram.SolutionVariables)
+            {
+                ram.Add(item["X"].ToString());
+            }
+            PlQuery Fuente = new PlQuery("fuentePw(X,_).");
+            foreach (PlQueryVariables item in Fuente.SolutionVariables)
+            {
+                fuente.Add(item["X"].ToString());
+            }
+            PlQuery Periferico = new PlQuery("periferico(X,_).");
+            foreach (PlQueryVariables item in Periferico.SolutionVariables)
+            {
+                periferico.Add(item["X"].ToString());
+            }
+            PlQuery Disco = new PlQuery("disco(X,_).");
+            foreach (PlQueryVariables item in Disco.SolutionVariables)
+            {
+                disco.Add(item["X"].ToString());
+            }
+            PlQuery Monitor = new PlQuery("monitor(X,_).");
+            foreach (PlQueryVariables item in Monitor.SolutionVariables)
+            {
+                monitor.Add(item["X"].ToString());
+            }
+            PlQuery Gabinete = new PlQuery("gabinete(X,_).");
+            foreach (PlQueryVariables item in Gabinete.SolutionVariables)
+            {
+                gabinete.Add(item["X"].ToString());
+            }
+
+
+
+            cmb_procesadores.DataSource = procesadores;
+            cmb_PlacaMadre.DataSource = palcaMadre;
+            cmb_GPU.DataSource = gpu;
+            cmb_Ram.DataSource = ram;
+            cmb_FuentePw.DataSource = fuente;
+            cmb_Periferico.DataSource = periferico;
+            cmb_Disco.DataSource = disco;
+            cmb_Monitor.DataSource = monitor;
+            cmb_Gabinete.DataSource = gabinete;
+
+        }
 
     }
 

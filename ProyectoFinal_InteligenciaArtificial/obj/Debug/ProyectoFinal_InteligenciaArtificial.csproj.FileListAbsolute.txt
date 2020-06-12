@@ -1,7 +1,6 @@
 C:\Users\Asus\Desktop\ProyectoFinal_InteligenciaArtificial\bin\Debug\ProyectoFinal_InteligenciaArtificial.exe.config
 C:\Users\Asus\Desktop\ProyectoFinal_InteligenciaArtificial\bin\Debug\ProyectoFinal_InteligenciaArtificial.exe
 C:\Users\Asus\Desktop\ProyectoFinal_InteligenciaArtificial\bin\Debug\ProyectoFinal_InteligenciaArtificial.pdb
-C:\Users\Asus\Desktop\ProyectoFinal_InteligenciaArtificial\bin\Debug\SwiPlCs.dll
 C:\Users\Asus\Desktop\ProyectoFinal_InteligenciaArtificial\obj\Debug\ProyectoFinal_InteligenciaArtificial.csprojAssemblyReference.cache
 C:\Users\Asus\Desktop\ProyectoFinal_InteligenciaArtificial\obj\Debug\ProyectoFinal_InteligenciaArtificial.Form1.resources
 C:\Users\Asus\Desktop\ProyectoFinal_InteligenciaArtificial\obj\Debug\ProyectoFinal_InteligenciaArtificial.Properties.Resources.resources
